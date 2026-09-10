@@ -73,7 +73,6 @@ const Index = () => {
               Welcome to
               <br />
               <span className="text-gradient-divine">Sri Ganesha Temple</span>
-              <p className="text-accent text-sm mt-2">CI/CD Deployment Test v2</p>
             </h1>
             <p className="font-body text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto mb-8 leading-relaxed">
               A sacred sanctuary of peace, devotion, and divine blessings.
