@@ -71,6 +71,7 @@ const Index = () => {
             </p>
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
               Welcome to our temple
+              FTP Deployment Test
               <br />
               <span className="text-gradient-divine">Sri Ganesha Temple</span>
             </h1>
