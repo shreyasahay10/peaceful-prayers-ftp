@@ -70,7 +70,7 @@ const Index = () => {
               ॐ श्री गणेशाय नमः
             </p>
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-              Welcome to our temple demo1
+              Welcome to our temple demo-123
               <br />
               <span className="text-gradient-divine">Sri Ganesha Temple</span>
             </h1>
