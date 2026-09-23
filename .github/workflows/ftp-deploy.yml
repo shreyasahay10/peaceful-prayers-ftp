@@ -1,4 +1,4 @@
-```yaml
+
 name: React FTP Deployment
 
 on:
@@ -56,4 +56,4 @@ jobs:
           protocol: ftps
           local-dir: ./dist/
           server-dir: ${{ secrets.FTP_TARGET_DIR }}
-```
+
