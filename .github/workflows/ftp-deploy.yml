@@ -1,3 +1,4 @@
+```yaml
 name: React FTP Deployment
 
 on:
@@ -6,10 +7,9 @@ on:
       - main
 
 jobs:
-  deploy:
-    name: Build and Deploy React App
+  build:
+    name: Build React App
     runs-on: ubuntu-latest
-    environment: production
 
     steps:
       - name: Checkout code
@@ -27,6 +27,25 @@ jobs:
       - name: Build React app
         run: npm run build
 
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: react-build
+          path: dist/
+
+  deploy:
+    name: Deploy via FTPS
+    needs: build
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: react-build
+          path: dist/
+
       - name: Deploy via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
@@ -37,3 +56,4 @@ jobs:
           protocol: ftps
           local-dir: ./dist/
           server-dir: ${{ secrets.FTP_TARGET_DIR }}
+```
